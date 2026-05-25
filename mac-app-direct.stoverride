@@ -5,6 +5,10 @@ rules:
   # Remote control, VPN, accelerators, and virtual machines.
   - PROCESS-NAME,ToDesk,DIRECT
   - PROCESS-PATH,/Applications/ToDesk.app/Contents/MacOS/ToDesk,DIRECT
+  - PROCESS-NAME,ToDesk_Service,DIRECT
+  - PROCESS-PATH,/Applications/ToDesk.app/Contents/MacOS/ToDesk_Service,DIRECT
+  - PROCESS-NAME,ToDesk_Session_Proxy,DIRECT
+  - PROCESS-PATH,/Applications/ToDesk.app/Contents/MacOS/ToDesk_Session_Proxy,DIRECT
   - DOMAIN-SUFFIX,todesk.com,DIRECT
   - DOMAIN-SUFFIX,youqu.com,DIRECT
   - PROCESS-NAME,SunloginClient,DIRECT
