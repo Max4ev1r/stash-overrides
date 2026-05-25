@@ -1,0 +1,139 @@
+name: Mac App Direct Guard
+desc: Direct-route local Mac apps that commonly break under TUN/system proxy. Generated from this machine's installed applications.
+
+rules:
+  # Remote control, VPN, accelerators, and virtual machines.
+  - PROCESS-NAME,ToDesk,DIRECT
+  - PROCESS-PATH,/Applications/ToDesk.app/Contents/MacOS/ToDesk,DIRECT
+  - DOMAIN-SUFFIX,todesk.com,DIRECT
+  - DOMAIN-SUFFIX,youqu.com,DIRECT
+  - PROCESS-NAME,SunloginClient,DIRECT
+  - PROCESS-PATH,/Applications/SunloginClient.app/Contents/MacOS/SunloginClient,DIRECT
+  - DOMAIN-SUFFIX,oray.com,DIRECT
+  - DOMAIN-SUFFIX,sunlogin.oray.com,DIRECT
+  - PROCESS-NAME,Tailscale,DIRECT
+  - PROCESS-PATH,/Applications/Tailscale.app/Contents/MacOS/Tailscale,DIRECT
+  - DOMAIN-SUFFIX,tailscale.com,DIRECT
+  - DOMAIN-SUFFIX,ts.net,DIRECT
+  - PROCESS-NAME,prl_client_app,DIRECT
+  - PROCESS-PATH,/Applications/Parallels Desktop.app/Contents/MacOS/prl_client_app,DIRECT
+  - PROCESS-NAME,雷神加速器,DIRECT
+  - PROCESS-PATH,/Applications/雷神加速器.app/Contents/MacOS/雷神加速器,DIRECT
+  - DOMAIN-SUFFIX,leigod.com,DIRECT
+
+  # Messaging, meetings, and realtime collaboration.
+  - PROCESS-NAME,WeChat,DIRECT
+  - PROCESS-PATH,/Applications/WeChat.app/Contents/MacOS/WeChat,DIRECT
+  - PROCESS-NAME,企业微信,DIRECT
+  - PROCESS-PATH,/Applications/企业微信.app/Contents/MacOS/企业微信,DIRECT
+  - PROCESS-NAME,QQ,DIRECT
+  - PROCESS-PATH,/Applications/QQ.app/Contents/MacOS/QQ,DIRECT
+  - PROCESS-NAME,TencentMeeting,DIRECT
+  - PROCESS-PATH,/Applications/TencentMeeting.app/Contents/MacOS/TencentMeeting,DIRECT
+  - PROCESS-NAME,zoom.us,DIRECT
+  - PROCESS-PATH,/Applications/zoom.us.app/Contents/MacOS/zoom.us,DIRECT
+  - PROCESS-NAME,MSTeams,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft Teams.app/Contents/MacOS/MSTeams,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wechat.com,DIRECT
+  - DOMAIN-SUFFIX,wechatpay.cn,DIRECT
+  - DOMAIN-SUFFIX,wecom.work,DIRECT
+  - DOMAIN-SUFFIX,work.weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,gtimg.com,DIRECT
+  - DOMAIN-SUFFIX,myqcloud.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,tencentmeeting.com,DIRECT
+  - DOMAIN-SUFFIX,voovmeeting.com,DIRECT
+  - DOMAIN-SUFFIX,zoom.us,DIRECT
+  - DOMAIN-SUFFIX,teams.microsoft.com,DIRECT
+
+  # China cloud storage, office suites, device sync, and utility apps.
+  - PROCESS-NAME,BaiduNetdisk_mac,DIRECT
+  - PROCESS-PATH,/Applications/BaiduNetdisk_mac.app/Contents/MacOS/BaiduNetdisk_mac,DIRECT
+  - PROCESS-NAME,aDrive,DIRECT
+  - PROCESS-PATH,/Applications/aDrive.app/Contents/MacOS/aDrive,DIRECT
+  - PROCESS-NAME,wpsoffice,DIRECT
+  - PROCESS-PATH,/Applications/wpsoffice.app/Contents/MacOS/wpsoffice,DIRECT
+  - PROCESS-NAME,OneDrive,DIRECT
+  - PROCESS-PATH,/Applications/OneDrive.app/Contents/MacOS/OneDrive,DIRECT
+  - PROCESS-NAME,Microsoft Outlook,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft Outlook.app/Contents/MacOS/Microsoft Outlook,DIRECT
+  - PROCESS-NAME,Microsoft Word,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word,DIRECT
+  - PROCESS-NAME,Microsoft Excel,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft Excel.app/Contents/MacOS/Microsoft Excel,DIRECT
+  - PROCESS-NAME,Microsoft PowerPoint,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft PowerPoint.app/Contents/MacOS/Microsoft PowerPoint,DIRECT
+  - PROCESS-NAME,Microsoft OneNote,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft OneNote.app/Contents/MacOS/Microsoft OneNote,DIRECT
+  - PROCESS-NAME,小米互联服务,DIRECT
+  - PROCESS-PATH,/Applications/小米互联服务.app/Contents/MacOS/小米互联服务,DIRECT
+  - PROCESS-NAME,i4Tools,DIRECT
+  - PROCESS-PATH,/Applications/i4tools.app/Contents/MacOS/i4Tools,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,baidupcs.com,DIRECT
+  - DOMAIN-SUFFIX,baidubce.com,DIRECT
+  - DOMAIN-SUFFIX,aliyundrive.com,DIRECT
+  - DOMAIN-SUFFIX,alicloudccp.com,DIRECT
+  - DOMAIN-SUFFIX,wps.cn,DIRECT
+  - DOMAIN-SUFFIX,kdocs.cn,DIRECT
+  - DOMAIN-SUFFIX,kingsoft.com,DIRECT
+  - DOMAIN-SUFFIX,live.com,DIRECT
+  - DOMAIN-SUFFIX,office.com,DIRECT
+  - DOMAIN-SUFFIX,office365.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+  - DOMAIN-SUFFIX,sharepoint.com,DIRECT
+  - DOMAIN-SUFFIX,onedrive.com,DIRECT
+  - DOMAIN-SUFFIX,xiaomi.com,DIRECT
+  - DOMAIN-SUFFIX,mi.com,DIRECT
+
+  # China media, music, shopping, and app ecosystems.
+  - PROCESS-NAME,NeteaseMusic,DIRECT
+  - PROCESS-PATH,/Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic,DIRECT
+  - PROCESS-NAME,抖音,DIRECT
+  - PROCESS-PATH,/Applications/抖音.app/Contents/MacOS/抖音,DIRECT
+  - PROCESS-NAME,哔哩哔哩,DIRECT
+  - PROCESS-PATH,/Applications/哔哩哔哩.app/Contents/MacOS/哔哩哔哩,DIRECT
+  - PROCESS-NAME,QQLive,DIRECT
+  - PROCESS-PATH,/Applications/QQLive.app/Contents/MacOS/QQLive,DIRECT
+  - PROCESS-NAME,Steam,DIRECT
+  - PROCESS-PATH,/Applications/Steam.app/Contents/MacOS/steam_osx,DIRECT
+  - PROCESS-NAME,MuMuPlayer,DIRECT
+  - PROCESS-PATH,/Applications/MuMuPlayer.app/Contents/MacOS/MuMuPlayer,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,126.net,DIRECT
+  - DOMAIN-SUFFIX,music.163.com,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,amemv.com,DIRECT
+  - DOMAIN-SUFFIX,byteimg.com,DIRECT
+  - DOMAIN-SUFFIX,bytedance.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,biliapi.net,DIRECT
+  - DOMAIN-SUFFIX,video.qq.com,DIRECT
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
+  - DOMAIN-SUFFIX,steamchina.com,DIRECT
+
+  # macOS, Apple, security, input, and device utilities.
+  - PROCESS-NAME,Safari,DIRECT
+  - PROCESS-PATH,/Applications/Safari.app/Contents/MacOS/Safari,DIRECT
+  - PROCESS-NAME,logioptionsplus,DIRECT
+  - PROCESS-PATH,/Applications/logioptionsplus.app/Contents/MacOS/logioptionsplus,DIRECT
+  - PROCESS-NAME,Microsoft Defender Shim,DIRECT
+  - PROCESS-PATH,/Applications/Microsoft Defender Shim.app/Contents/MacOS/launcher,DIRECT
+  - PROCESS-NAME,WeTypeInstaller,DIRECT
+  - PROCESS-PATH,/Applications/WeTypeInstaller_1001.app/Contents/MacOS/WeTypeInstaller,DIRECT
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+  - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+  - DOMAIN-SUFFIX,logitech.com,DIRECT
+  - DOMAIN-SUFFIX,logi.com,DIRECT
+  - DOMAIN-SUFFIX,download.windowsupdate.com,DIRECT
+  - DOMAIN-SUFFIX,update.microsoft.com,DIRECT
+
+  # Domestic network catch-all after app-specific rules.
+  - GEOIP,CN,DIRECT
