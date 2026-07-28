@@ -1,5 +1,16 @@
 name: Mac App Direct Guard
-desc: Minimal direct-route guard for domestic Mac apps. Browsers, global collaboration apps, Apple services, Microsoft apps, Steam, and proxy clients remain governed by the main subscription.
+desc: Fast domestic DNS plus minimal direct-route guards. Foreign DNS, browsers, global collaboration apps, Apple services, Microsoft apps, Steam, and proxy clients remain governed by the main subscription.
+
+dns:
+  # Never resolve proxy servers through Stash's own listener.
+  proxy-server-nameserver: #!replace
+    - 223.5.5.5
+    - 119.29.29.29
+  # Keep foreign DNS on the subscription while domestic domains use nearby DNS.
+  nameserver-policy:
+    'geosite:cn':
+      - 223.5.5.5
+      - 119.29.29.29
 
 rules:
   # Remote control and accelerators.
@@ -44,11 +55,6 @@ rules:
   - DOMAIN-SUFFIX,xiaomi.com,DIRECT
 
   # Domestic media and app ecosystems.
-  - PROCESS-NAME,NeteaseMusic,DIRECT
-  - PROCESS-NAME,抖音,DIRECT
-  - PROCESS-NAME,哔哩哔哩,DIRECT
-  - PROCESS-NAME,QQLive,DIRECT
-  - PROCESS-NAME,MuMuPlayer,DIRECT
   - DOMAIN-SUFFIX,music.163.com,DIRECT
   - DOMAIN-SUFFIX,douyin.com,DIRECT
   - DOMAIN-SUFFIX,bilibili.com,DIRECT
